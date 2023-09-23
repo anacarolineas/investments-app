@@ -1,6 +1,10 @@
-namespace Halle.Investments.Infra.Data.Persistence;
+using Microsoft.EntityFrameworkCore;
 
-public class AppDbContext
+namespace Halle.Investments.Infrastructure.Persistence;
+
+public class AppDbContext : DbContext
 {
+    public AppDbContext(DbContextOptions options): base(options) { }
     
+    //Db set
 }

@@ -4,18 +4,22 @@
         <TargetFramework>net7.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <RootNamespace>Halle.Investments.Infra.Data</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
       <Folder Include="Identity" />
-      <Folder Include="Persistence\Configuration" />
       <Folder Include="Persistence\Migrations" />
+      <Folder Include="Persistence\Repositories" />
     </ItemGroup>
 
     <ItemGroup>
       <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.10" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.10" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Halle.Investments.Application\Halle.Investments.Application.csproj" />
+      <ProjectReference Include="..\Halle.Investments.Domain\Halle.Investments.Domain.csproj" />
     </ItemGroup>
 
 </Project>
