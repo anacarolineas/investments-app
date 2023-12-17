@@ -20,7 +20,8 @@
   <ItemGroup>
     <Folder Include="Common" />
     <Folder Include="Dtos" />
-    <Folder Include="UseCases" />
+    <Folder Include="UseCases\Rebalancing\Parameters\UpdateParameters\" />
+    <Folder Include="UseCases\Transaction" />
   </ItemGroup>
 
 </Project>
