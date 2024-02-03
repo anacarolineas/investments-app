@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="NewId" Version="4.0.1" />
-    <PackageReference Include="StronglyTypedId" Version="0.2.1" />
+     <PackageReference Include="NewId" Version="4.0.1" />
+    <PackageReference Include="StronglyTypedId" Version="0.2.1" PrivateAssets="all" ExcludeAssets="runtime" />
   </ItemGroup>
 
 </Project>

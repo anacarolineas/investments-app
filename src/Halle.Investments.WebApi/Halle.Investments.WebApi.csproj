@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -19,7 +19,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Halle.Investments.Application\Halle.Investments.Application.csproj" />
     <ProjectReference Include="..\Halle.Investments.Domain\Halle.Investments.Domain.csproj" />
-    <ProjectReference Include="..\Halle.Investments.Persistence\Halle.Investments.Infraestructure.csproj" />
+    <ProjectReference Include="..\Halle.Investments.Infrastructure\Halle.Investments.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>

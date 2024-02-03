@@ -4,7 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace Halle.Investments.Infraestructure
+namespace Halle.Investments.Infrastructure
 {
     public class ApplicationDbInitializer : IHostedService
     {

@@ -1,6 +1,6 @@
 using Halle.Investments.Application.Common;
 using Halle.Investments.Domain.Entities.Rebalancing;
-using Halle.Investments.Infraestructure;
+using Halle.Investments.Infrastructure;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 

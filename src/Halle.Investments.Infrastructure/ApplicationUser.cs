@@ -2,7 +2,7 @@
 using MassTransit;
 using Microsoft.AspNetCore.Identity;
 
-namespace Halle.Investments.Infraestructure
+namespace Halle.Investments.Infrastructure
 {
     public class ApplicationUser : IdentityUser<Guid>, IUser
     {
