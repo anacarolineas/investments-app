@@ -1,19 +1,25 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>c0eb204a-c455-427d-8b44-7d1ee0485e7d</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
+    <DockerComposeProjectPath>..\..\docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.10" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.5" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Halle.Investments.Application\Halle.Investments.Application.csproj" />
-    <ProjectReference Include="..\Halle.Investments.Infrastructure\Halle.Investments.Infrastructure.csproj" />
+    <ProjectReference Include="..\Halle.Investments.Domain\Halle.Investments.Domain.csproj" />
+    <ProjectReference Include="..\Halle.Investments.Persistence\Halle.Investments.Infraestructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>

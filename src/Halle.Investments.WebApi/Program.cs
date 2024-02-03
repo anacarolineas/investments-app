@@ -1,20 +1,30 @@
-using Halle.Investments.Application;
-using Halle.Investments.Application.Configurations;
-using Halle.Investments.Infrastructure;
+using Halle.Investments.Infraestructure;
 using Halle.Investments.Infrastructure.Configurations;
+using Halle.Investments.Infrastructure.Persistence;
+using Halle.Investments.WebApi.Configurations;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.AddValidationSetup();
+builder.Services.AddAuthorization();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddPersistenceSetup(builder.Configuration);
+
+builder.Services.AddApplicationSetup();
+
 builder.Services
-    .AddApplication()
-    .AddInfrastructure();
+    .AddIdentityApiEndpoints<ApplicationUser>()
+    .AddEntityFrameworkStores<ApplicationDbContext>();
+
+builder.Services.AddHttpContextAccessor();
+
+builder.Services.AddMediatRSetup();
 
 var app = builder.Build();
 

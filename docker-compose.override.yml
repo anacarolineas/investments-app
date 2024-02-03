@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+  halle.investments.webapi:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:7123;http://+:7122
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=yourpassword
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+      - ConnectionStrings__DefaultConnection=Host=db-server;Port=5432;Database=AppInvestmentsDb;Username=app_user;Password=thelastofus
+    ports:
+      - "7123:7123"
+      - "7122:7122"
+    volumes:
+      - ./https:/https/:ro
+    networks:
+      - localdev

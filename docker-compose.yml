@@ -1,0 +1,27 @@
+version: '3.4'
+
+services:
+  db-server:
+    image: postgres:latest
+    container_name: db-server
+    ports:
+      - "5432:5432"
+    networks:
+      - localdev
+    environment:
+      - POSTGRES_USER=app_user # The PostgreSQL user (useful to connect to the database)
+      - POSTGRES_PASSWORD=thelastofus # The PostgreSQL password (useful to connect to the database)
+      - POSTGRES_DB=AppInvestmentsDb # The PostgreSQL default database (automatically created at first launch)
+  halle.investments.webapi:
+    image: halle.investments.webapi:local
+    container_name: halle.investments.webapi
+    build:
+      context: .
+      dockerfile: src/Halle.Investments.WebApi/Dockerfile
+    depends_on:
+    - db-server
+    networks:
+      - localdev
+
+volumes:
+  sqlvolume:
