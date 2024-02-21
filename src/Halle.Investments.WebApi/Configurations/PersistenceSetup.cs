@@ -1,6 +1,6 @@
 ﻿using EntityFramework.Exceptions.PostgreSQL;
 using Halle.Investments.Application.Auth;
-using Halle.Investments.Infraestructure;
+using Halle.Investments.Infrastructure;
 using Halle.Investments.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 

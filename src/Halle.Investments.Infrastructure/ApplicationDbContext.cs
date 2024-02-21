@@ -10,10 +10,12 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser, Applicati
 {
     public ApplicationDbContext(DbContextOptions options): base(options) { }
 
-    //Db set
-    public DbSet<RebalancingManualTransaction> RebalancingManualTransactions { get; set; } = null!;
 
-    public DbSet<RebalancingParameters> RebalancingParameters { get; set; } = null!;
+    public DbSet<RebalancingParameter> RebalancingParameters { get; set; } = null!;
+
+    public DbSet<RebalancingUser> RebalancingUsers { get; set; } = null!;
+
+    public DbSet<RebalancingGoal> RebalancingGoals { get; set; } = null!;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

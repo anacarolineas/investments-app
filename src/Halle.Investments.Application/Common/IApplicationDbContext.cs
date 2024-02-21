@@ -5,9 +5,9 @@ namespace Halle.Investments.Application.Common;
 
 public interface IApplicationDbContext : IAsyncDisposable, IDisposable
 {
-    public DbSet<RebalancingParameters> RebalancingParameters { get; }
-
-    public DbSet<RebalancingManualTransaction> RebalancingManualTransactions { get; }
+    public DbSet<RebalancingUser> RebalancingUsers { get; }
+    public DbSet<RebalancingGoal> RebalancingGoals { get; }
+    public DbSet<RebalancingParameter> RebalancingParameters { get; }
 
 
     public Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);

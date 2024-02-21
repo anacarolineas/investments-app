@@ -9,11 +9,11 @@ namespace Halle.Investments.Domain.Entities.Common;
 public interface IGuid { }
 
 [StronglyTypedId]
-public partial struct RebalancingParametersId : IGuid
+public partial struct RebalancingParameterId : IGuid
 {
-    public static implicit operator RebalancingParametersId(Guid guid)
+    public static implicit operator RebalancingParameterId(Guid guid)
     {
-        return new RebalancingParametersId(guid);
+        return new RebalancingParameterId(guid);
     }
 }
 
@@ -27,22 +27,23 @@ public partial struct UserId : IGuid
 }
 
 [StronglyTypedId]
-public partial struct RebalancingGoalsId : IGuid
+public partial struct RebalancingGoalId : IGuid
 {
-    public static implicit operator RebalancingGoalsId(Guid guid)
+    public static implicit operator RebalancingGoalId(Guid guid)
     {
-        return new RebalancingGoalsId(guid);
+        return new RebalancingGoalId(guid);
     }
 }
 
 [StronglyTypedId]
-public partial struct RebalancingManualTransactionId : IGuid
+public partial struct RebalancingUserId : IGuid
 {
-    public static implicit operator RebalancingManualTransactionId(Guid guid)
+    public static implicit operator RebalancingUserId(Guid guid)
     {
-        return new RebalancingManualTransactionId(guid);
+        return new RebalancingUserId(guid);
     }
 }
+
 
 
 
